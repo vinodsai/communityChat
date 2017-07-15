@@ -1,0 +1,38 @@
+/* CSS declarations go here */
+/*main theme color  #02B875*/
+.mainHeading{
+  color: #02B875;
+}
+.mainPara{
+  font-size: 15px !important;
+  color: grey !important;
+}
+.addForm {
+    align-content: center;
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 450px;
+}
+.loginField{
+  outline: 0;
+  border-width: 0 0 2px 0;
+  border-color: #02B875;
+  width: 300px;
+}
+.registerField{
+  outline: 0;
+  border-width: 0 0 2px 0;
+  border-color: #02B875;
+  width: 300px;
+}
+#signIn{
+  background-color: white;
+  color: #02B875;
+  border-color: #02B875;
+}
+
+#register{
+  background-color: white;
+  color: #02B875;
+  border-color: #02B875;
+}
