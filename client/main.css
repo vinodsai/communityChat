@@ -1,38 +1,36 @@
 /* CSS declarations go here */
 /*main theme color  #02B875*/
-.mainHeading{
+.heading{
+  color: #02B875;
+  font-size: 40px;
+}
+.navbar-default .navbar-left > li > a {
+    color: #02B875;
+}
+.jumbotron p {
+  font-size: 17px;
+  color: grey
+}
+.content{
+  text-align: center;
+  width: 800px;
+  min-height: 200px;
+}
+.content h3{
   color: #02B875;
 }
-.mainPara{
-  font-size: 15px !important;
-  color: grey !important;
+.panel-default {
+    background-color: #02B875;
+    border-color: #02B875;
 }
-.addForm {
-    align-content: center;
-    position: absolute;
-    margin-top: 200px;
-    margin-left: 450px;
+.panel-default .btn{
+    background-color: #02B875;
+    border-color: #02B875;
+    color: white
 }
-.loginField{
-  outline: 0;
-  border-width: 0 0 2px 0;
-  border-color: #02B875;
-  width: 300px;
+.channelLink {
+  margin-left: -55px;
 }
-.registerField{
-  outline: 0;
-  border-width: 0 0 2px 0;
-  border-color: #02B875;
-  width: 300px;
-}
-#signIn{
-  background-color: white;
-  color: #02B875;
-  border-color: #02B875;
-}
-
-#register{
-  background-color: white;
-  color: #02B875;
-  border-color: #02B875;
+.channelLink > li > a{
+  color: #02B875
 }

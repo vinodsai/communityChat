@@ -1,4 +1,4 @@
-<template name="home">
+<template name="feed">
   <nav class='navbar navbar-default'>
     <div class="container-fluid">
       <div class="navbar-header">
@@ -8,12 +8,12 @@
         {{#if currentUser}}
          <li><a href=''>Profile</a></li>
          {{#with uniqueId}}
-         <li><a href={{pathFor 'feed'}}>Feed</a></li>
+         <li><a href={{pathFor 'feed' _id=_id}}>Feed</a></li>
          {{/with}}
          {{#if isInRole 'admin'}}
           <li><a href={{pathFor 'dashboard'}}>Dashboard</a></li>
          {{/if}}
-         <li><a href='#' id='loggedOut'>Log Out</a></li>
+         <!-- <li><a href='#' id='loggedOut'>Log Out</a></li> -->
          {{else}}
          <li><a href={{pathFor 'register'}}>Register</a></li>
          <li><a href={{pathFor 'login'}}>SignIn</a></li>
@@ -21,17 +21,18 @@
       </ul>
     </div>
   </nav>
-  <div class="container-fluid">
-    <div class="jumbotron">
-      <h3><span class="heading">C</span>onnect,<span class="heading">S</span>hare</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores officiis provident sunt eius sed labore nulla ex inventore. Vitae eligendi itaque cumque consectetur! Maiores qui dolor natus impedit saepe ducimus!</p>
-    </div>
-  </div>
   <div class="container">
-    {{# if currentUser}}
-      {{> homeContent}}
-        {{else}}
-          {{> homeContent}}
-    {{/if}}
+    <div class="row">
+      <div class="col-lg-2">
+        <ul class="nav nav-pills nav-stacked channelLink">
+          {{#each userFeed}}
+            <li><a href={{pathFor 'userFeed' feed=feed}}>{{feed}}</a></li>
+          {{/each}}
+        </ul>
+      </div>
+      <div class="col-lg-9">
+        
+      </div>
+    </div>
   </div>
 </template>
