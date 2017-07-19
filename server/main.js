@@ -12,5 +12,8 @@ Meteor.publish("user",
   }
 );
 Meteor.publish("allFeeds", function () {
-  return Feeds.find();
+  return Feeds.find({user:Meteor.userId()});
+});
+Meteor.publish("allMessages", function () {
+  return Messages.find();
 });

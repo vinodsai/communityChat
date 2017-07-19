@@ -28,9 +28,24 @@
     border-color: #02B875;
     color: white
 }
-.channelLink {
-  margin-left: -55px;
-}
 .channelLink > li > a{
   color: #02B875
+}
+.inputArea{
+  margin-left: 200px
+}
+#my_msg_submit {
+  background-color: white;
+  color: #02B875;
+  border-color: #02B875;
+}
+#my_msg{
+  margin-left: -130px;
+  width: 500px;
+}
+.feedName{
+  color:#02B875;
+}
+.messageUser{
+  color:#02B875;
 }

@@ -1,0 +1,8 @@
+<template name="chatFeed">
+    <h4 class="feedName">{{feedName}}</h4>
+    <div class="inputArea">
+      <input type="text" id='my_msg' placeholder="Type your message...">
+      <button class="btn btn-warning btn-sm" id="my_msg_submit">Send</button>
+    </div><br>
+    {{> messages}}
+</template>

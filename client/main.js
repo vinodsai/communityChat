@@ -5,3 +5,4 @@ import './main.html';
 Meteor.subscribe('allChannels');
 Meteor.subscribe('allFeeds');
 Meteor.subscribe('user');
+Meteor.subscribe('allMessages');
