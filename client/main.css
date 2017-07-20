@@ -49,3 +49,9 @@
 .messageUser{
   color:#02B875;
 }
+.messageBox{
+  border: 1px solid #02B875;
+  overflow-y: scroll;
+  height: 500px;
+  padding: 10px
+}
