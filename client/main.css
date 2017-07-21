@@ -38,10 +38,12 @@
   background-color: white;
   color: #02B875;
   border-color: #02B875;
+
 }
 #my_msg{
-  margin-left: -130px;
-  width: 500px;
+  margin-left: -200px;
+  width: 80%;
+
 }
 .feedName{
   color:#02B875;
@@ -53,5 +55,29 @@
   border: 1px solid #02B875;
   overflow-y: scroll;
   height: 500px;
-  padding: 10px
+  padding: 10px;
+  margin-top: -10px
+}
+.registerForm{
+  margin-left: 37%;
+  margin-top: 20%
+}
+.input-group {
+  padding: 1px
+}
+#username, #email, #password{
+  width: 300px;
+}
+#register{
+  background-color: white;
+  color:#02B875;
+  border-color: #02B875;
+}
+#loginEmail, #loginPassword{
+  width: 300px;
+}
+#login{
+  background-color: white;
+  color:#02B875;
+  border-color: #02B875;
 }
