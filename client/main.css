@@ -81,3 +81,14 @@
   color:#02B875;
   border-color: #02B875;
 }
+.profileName{
+  color: #02B875;
+}
+.tab-pills > li > a {
+  color: #02B875;
+  background-color: white
+}
+.tab-pills > li.active > a, .tab-pills > li.active > a:hover, .tab-pills > li.active > a:focus {
+    color: #02B875;
+    background-color: white;
+}

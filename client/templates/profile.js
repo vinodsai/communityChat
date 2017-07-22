@@ -5,5 +5,8 @@ Template.profile.helpers({
   },
   uniqueId: function(){
     return Meteor.user();
+  },
+  userFeed: function(){
+    return  Feeds.find();
   }
 })
