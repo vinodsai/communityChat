@@ -23,17 +23,16 @@
   <div class="container">
     <div class="jumbotron">
       <h4>Welcome <span class="profileName">{{username}}</span></h4>
+      {{#if profileUser}}
+      <button type="button" class="btn btn-default btn-sm" id='getId'>Send Friend Request</button>
+      {{else}}
+      <p>Duh</p>
+      {{/if}}
     </div>
     <div class="profieBox">
       <div class="row">
         <div class="col-lg-9">
           {{> profileInfo}}
-        </div>
-        <div class='col-lg-3'>
-          <h5 class="profileName">Your Feeds</h5>
-            {{#each userFeed}}
-              <p>{{feed}}</p>
-            {{/each}}
         </div>
       </div>
     </div>

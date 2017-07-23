@@ -2,7 +2,7 @@
     <div class="messageBox">
       {{#each allMessages}}
         <h5>{{message}}</h5>
-        <h6 class='messageUser'><strong>{{username}}</strong></h6>
+        <h6 class='messageUser'><strong><a href={{pathFor 'userProfile' username=username _id=user}}>{{username}}</a></strong></h6>
       {{/each}}
     </div>
 </template>

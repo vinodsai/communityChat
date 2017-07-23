@@ -51,6 +51,10 @@
 .messageUser{
   color:#02B875;
 }
+.messageUser a{
+  color:#02B875;
+  text-decoration: none;
+}
 .messageBox{
   border: 1px solid #02B875;
   overflow-y: scroll;
