@@ -1,38 +1,98 @@
 /* CSS declarations go here */
 /*main theme color  #02B875*/
-.mainHeading{
+.heading{
+  color: #02B875;
+  font-size: 40px;
+}
+.navbar-default .navbar-left > li > a {
+    color: #02B875;
+}
+.jumbotron p {
+  font-size: 17px;
+  color: grey
+}
+.content{
+  text-align: center;
+  width: 800px;
+  min-height: 200px;
+}
+.content h3{
   color: #02B875;
 }
-.mainPara{
-  font-size: 15px !important;
-  color: grey !important;
+.panel-default {
+    background-color: #02B875;
+    border-color: #02B875;
 }
-.addForm {
-    align-content: center;
-    position: absolute;
-    margin-top: 200px;
-    margin-left: 450px;
+.panel-default .btn{
+    background-color: #02B875;
+    border-color: #02B875;
+    color: white
 }
-.loginField{
-  outline: 0;
-  border-width: 0 0 2px 0;
-  border-color: #02B875;
-  width: 300px;
+.channelLink > li > a{
+  color: #02B875
 }
-.registerField{
-  outline: 0;
-  border-width: 0 0 2px 0;
-  border-color: #02B875;
-  width: 300px;
+.inputArea{
+  margin-left: 200px
 }
-#signIn{
+#my_msg_submit {
   background-color: white;
   color: #02B875;
   border-color: #02B875;
-}
 
+}
+#my_msg{
+  margin-left: -200px;
+  width: 80%;
+
+}
+.feedName{
+  color:#02B875;
+}
+.messageUser{
+  color:#02B875;
+}
+.messageUser a{
+  color:#02B875;
+  text-decoration: none;
+}
+.messageBox{
+  border: 1px solid #02B875;
+  overflow-y: scroll;
+  height: 500px;
+  padding: 10px;
+  margin-top: -10px
+}
+.registerForm{
+  margin-left: 37%;
+  margin-top: 20%
+}
+.input-group {
+  padding: 1px
+}
+#username, #email, #password{
+  width: 300px;
+}
 #register{
   background-color: white;
-  color: #02B875;
+  color:#02B875;
   border-color: #02B875;
+}
+#loginEmail, #loginPassword{
+  width: 300px;
+}
+#login{
+  background-color: white;
+  color:#02B875;
+  border-color: #02B875;
+}
+.profileName{
+  color: #02B875;
+}
+.tab-pills > li > a {
+  color: #02B875;
+  background-color: white
+}
+.tab-pills > li.active > a, .tab-pills > li.active > a:hover, .tab-pills > li.active > a:focus {
+    color: #02B875;
+    background-color: white;
 }

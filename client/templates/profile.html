@@ -1,13 +1,12 @@
-<template name="home">
+<template name='profile'>
   <nav class='navbar navbar-default'>
     <div class="container-fluid">
       <div class="navbar-header">
-        <a href="" class="navbar-brand">Community Chat</a>
+        <a href={{pathFor 'home'}} class="navbar-brand">Community Chat</a>
       </div>
       <ul class='nav navbar-nav navbar-left'>
         {{#if currentUser}}
          {{#with uniqueId}}
-         <li><a href={{pathFor 'userProfile' username=username _id=this._id}}>Profile</a></li>
          <li><a href={{pathFor 'feed'}}>Feed</a></li>
          {{/with}}
          {{#if isInRole 'admin'}}
@@ -21,17 +20,21 @@
       </ul>
     </div>
   </nav>
-  <div class="container-fluid">
-    <div class="jumbotron">
-      <h3><span class="heading">C</span>onnect,<span class="heading">S</span>hare</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores officiis provident sunt eius sed labore nulla ex inventore. Vitae eligendi itaque cumque consectetur! Maiores qui dolor natus impedit saepe ducimus!</p>
-    </div>
-  </div>
   <div class="container">
-    {{# if currentUser}}
-      {{> homeContent}}
-        {{else}}
-          {{> homeContent}}
-    {{/if}}
+    <div class="jumbotron">
+      <h4>Welcome <span class="profileName">{{username}}</span></h4>
+      {{#if profileUser}}
+      <button type="button" class="btn btn-default btn-sm" id='getId'>Send Friend Request</button>
+      {{else}}
+      <p>Duh</p>
+      {{/if}}
+    </div>
+    <div class="profieBox">
+      <div class="row">
+        <div class="col-lg-9">
+          {{> profileInfo}}
+        </div>
+      </div>
+    </div>
   </div>
 </template>

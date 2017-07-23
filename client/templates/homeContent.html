@@ -1,0 +1,28 @@
+<template name='homeContent'>
+  <div class="container content">
+    <h3>Connect</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam nostrum cum officia voluptas vitae dicta molestiae impedit maxime esse quisquam ipsa quasi, quia quis deserunt, adipisci pariatur eius ut consequatur!</p>
+  </div>
+  <div class="container content">
+    <h3>Channels</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam nostrum cum officia voluptas vitae dicta molestiae impedit maxime esse quisquam ipsa quasi, quia quis deserunt, adipisci pariatur eius ut consequatur!</p>
+    <div class="row">
+      {{#each allChannel}}
+        <div class="col-lg-4">
+          <div class="panel panel-default">
+              <div class="panel-heading">
+                <h5>{{channel}}</h5>
+                {{#if currentUser}}
+                  <button class='btn btn-sm' id='addFeed'>Add to Feed</button>
+                {{/if}}
+              </div>
+            </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+  <div class="container content">
+    <h3>Share</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam nostrum cum officia voluptas vitae dicta molestiae impedit maxime esse quisquam ipsa quasi, quia quis deserunt, adipisci pariatur eius ut consequatur!</p>
+  </div>
+</template>

@@ -1,7 +1,10 @@
 <head>
-  <title>carRent</title>
+  <title>communityChart</title>
 </head>
 
 <body>
-
+{{> layout}}
 </body>
+<template name='layout'>
+  {{> Template.dynamic template=content}}
+</template>
