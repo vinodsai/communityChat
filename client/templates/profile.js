@@ -1,4 +1,9 @@
 
+Template.profile.onRendered(function() {
+  Meteor.subscribe('allFriends');
+  // counter = 0;
+});
+
 Template.profile.helpers({
   username: function(){
     var name = FlowRouter.getParam('username');
@@ -14,8 +19,27 @@ Template.profile.helpers({
     var userId  = Meteor.userId();
     var profileId = FlowRouter.getParam('_id');
     if(userId!=profileId){
-      console.log(profileId);
+      return true;
+    }
+  },
+  sentRequest: function(){
+    var friendId = FlowRouter.getParam('_id');
+    var friendObject = Notifications.find({friendId: friendId}).count();
+    console.log(friendObject);
+    if(friendObject>=1){
+      return false;
+    }else{
       return true;
     }
   }
 });
+
+Template.profile.events({
+  'click #addFriend': function(){
+      var friendName = FlowRouter.getParam('username');
+      var friendId = FlowRouter.getParam('_id');
+      Meteor.call('addNotification', friendName,friendId);
+
+
+  }
+})

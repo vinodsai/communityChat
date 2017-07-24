@@ -24,7 +24,11 @@
     <div class="jumbotron">
       <h4>Welcome <span class="profileName">{{username}}</span></h4>
       {{#if profileUser}}
-      <button type="button" class="btn btn-default btn-sm" id='getId'>Send Friend Request</button>
+        {{#if sentRequest}}
+          <button type="button" class="btn btn-default btn-sm" id='addFriend'>Send Friend Request</button>
+        {{else}}
+          <p>Friend request already sent</p>
+        {{/if}}
       {{else}}
       <p>Duh</p>
       {{/if}}

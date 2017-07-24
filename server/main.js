@@ -17,3 +17,9 @@ Meteor.publish("allFeeds", function () {
 Meteor.publish("allMessages", function () {
   return Messages.find();
 });
+Meteor.publish('allFriends', function(){
+  return Friends.find();
+})
+Meteor.publish('allNotifications', function(){
+  return Notifications.find();
+})
