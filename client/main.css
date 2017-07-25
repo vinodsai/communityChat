@@ -96,3 +96,11 @@
     color: #02B875;
     background-color: white;
 }
+.name{
+  color: #02B875 !important;
+}
+.panel-default .notificationButton{
+    background-color: white;
+    border-color: #02B875;
+    color: #02B875 ;
+}

@@ -24,9 +24,9 @@ Template.profile.helpers({
   },
   sentRequest: function(){
     var friendId = FlowRouter.getParam('_id');
-    var friendObject = Notifications.find({friendId: friendId}).count();
-    console.log(friendObject);
-    if(friendObject>=1){
+    // var friendObject = Notifications.find({friendId: friendId}).count();
+    var friendObject = Notifications.find({ $and: [ {userId: Meteor.userId()}, {friendId: friendId}]}).count();
+    if(friendObject>0){
       return false;
     }else{
       return true;
