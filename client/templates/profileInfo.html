@@ -3,7 +3,9 @@
     <ul class="nav nav-pills tab-pills">
      <li class="active"><a data-toggle="pill" href="#home">Info</a></li>
      <li><a data-toggle="pill" href="#friends">Friends</a></li>
-     <li><a data-toggle="pill" href="#notifications">Notifications</a></li>
+     {{#if originalUser}}
+      <li><a data-toggle="pill" href="#notifications">Notifications</a></li>
+     {{/if}}
    </ul>
 
  <div class="tab-content">
