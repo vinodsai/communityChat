@@ -12,7 +12,7 @@ Meteor.publish("user",
   }
 );
 Meteor.publish("allFeeds", function () {
-  return Feeds.find({user:Meteor.userId()});
+  return Feeds.find();
 });
 Meteor.publish("allMessages", function () {
   return Messages.find();

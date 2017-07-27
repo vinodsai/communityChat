@@ -31,6 +31,11 @@ Template.profile.helpers({
     }else{
       return true;
     }
+  },
+  userFeeds: function(){
+    var userId = FlowRouter.getParam('_id');
+    console.log(userId);
+    return Feeds.find({user: userId})
   }
 });
 

@@ -1,7 +1,7 @@
 
 Template.feed.helpers({
   userFeed: function(){
-    return Feeds.find()
+    return Feeds.find({user: Meteor.userId()})
   },
   userName: function(){
     return Meteor.user();

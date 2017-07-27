@@ -38,6 +38,12 @@
         <div class="col-lg-9">
           {{> profileInfo}}
         </div>
+        <div class="col-lg-3">
+          <h5 class="userFeed">Feeds</h5>
+          {{#each userFeeds}}
+            <h6>{{feed}}</h6>
+          {{/each}}
+        </div>
       </div>
     </div>
   </div>
