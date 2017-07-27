@@ -39,7 +39,10 @@ Template.profile.events({
       var friendName = FlowRouter.getParam('username');
       var friendId = FlowRouter.getParam('_id');
       Meteor.call('addNotification', friendName,friendId);
-
-
+  },
+  'click #profileloggedOut': function(event){
+    event.preventDefault();
+    Meteor.logout();
+    FlowRouter.go('/');
   }
 })

@@ -48,8 +48,13 @@
 .feedName{
   color:#02B875;
 }
+.mainMessage{
+  position: relative;
+}
 .messageUser{
   color:#02B875;
+  position: absolute;
+  margin-top: -10px;
 }
 .messageUser a{
   color:#02B875;
@@ -68,6 +73,9 @@
 }
 .input-group {
   padding: 1px
+}
+.msgHelper {
+  color: grey;
 }
 #username, #email, #password{
   width: 300px;
@@ -103,4 +111,28 @@
     background-color: white;
     border-color: #02B875;
     color: #02B875 ;
+}
+.userFriend{
+  color: #02B875;
+}
+.button-group{
+  display: inline !important;
+}
+#removeFriend{
+  color:  #02B875;
+  border-color: #02B875 ;
+  background-color: white;
+}
+#removeFriend:active{
+  color:  red;
+  border-color: black  !important;
+  background-color: white;
+}
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee;
+    margin-right: 900px;
+    width: 50%;
 }

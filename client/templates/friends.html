@@ -2,7 +2,13 @@
   <br>
   <div class="friendsContainer">
     {{#each userFriends}}
-      <p>{{friendName}}</p>
+        <h5 class='userFriend'><a href={{pathFor 'userProfile' username=friendName _id=friendId}}>{{friendName}}</a></h5>
+        <div class="button-group">
+          {{#if profileUser}}
+            <button class="btn btn-xs btn-default" id='removeFriend'>Remove From Friends</button>
+          {{/if}}
+        </div>
+        <hr>
     {{/each}}
   </div>
 </template>

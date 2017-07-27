@@ -1,6 +1,6 @@
 Template.notifications.helpers({
   notification: function(){
-    return Notifications.find({friendId: Meteor.userId()});
+    return Notifications.find({friendId: Meteor.userId()}, {sort: { createdAt: -1 }});
   },
   wasFriend: function(){
     var friendNumber = Friends.find({ $and: [ {userId: Meteor.userId()}, {friendId: this.userId}]}).count();
@@ -11,6 +11,9 @@ Template.notifications.helpers({
     else{
       return true;
     }
+  },
+  allUsers: function(){
+    return Meteor.users();
   }
 })
 
