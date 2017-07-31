@@ -4,6 +4,11 @@ Template.chatFeed.helpers({
     Session.set('feedname', feed);
     var name = Session.get('feedname')
     return name;
+  },
+  totalFeedUsers: function(){
+    var feed = FlowRouter.getParam('feed');
+    console.log(feed);
+    return Feeds.find({feed: feed}).count();
   }
 });
 Template.chatFeed.events({

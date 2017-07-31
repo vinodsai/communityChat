@@ -49,11 +49,10 @@
   color:#02B875;
 }
 .mainMessage{
-  position: relative;
+
 }
 .messageUser{
   color:#02B875;
-  position: absolute;
   margin-top: -10px;
 }
 .messageUser a{
@@ -61,21 +60,21 @@
   text-decoration: none;
 }
 .messageBox{
-  border: 1px solid #02B875;
+
   overflow-y: scroll;
   height: 500px;
   padding: 10px;
-  margin-top: -10px
+  margin-top: -10px;
 }
 .registerForm{
   margin-left: 37%;
   margin-top: 20%
 }
 .input-group {
-  padding: 1px
+  padding: 0px
 }
 .msgHelper {
-  color: grey;
+  color: #303030;
 }
 #username, #email, #password{
   width: 300px;
@@ -138,4 +137,63 @@ hr {
 }
 .userFeed{
   color: #02B875;
+}
+.speech-bubble h5,h6{
+  padding: 4px;
+}
+.speechBubbleUser h5,h6{
+	padding: 4px;
+}
+.speech-bubble {
+	position: relative;
+	background: #EEE;
+  width: 60%;
+  left: 250px;
+  border-radius: .4em;
+
+}
+
+.speech-bubble:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+    border-top-color: #EEE;
+    border-bottom: 0;
+    margin-left: -30px;
+    margin-bottom: -12px;
+}
+
+.speechBubbleUser {
+	position: relative;
+	background: #02B875;
+  width: 60%;
+  left: 20px;
+  border-radius: .4em;
+  color: white
+}
+
+.speechBubbleUser:after {
+  content: '';
+	position: absolute;
+	left: 0;
+	top: 10px;
+	width: 0;
+	height: 0;
+	border: 21px solid transparent;
+	border-right-color: #02B875 ;
+	border-left: 0;
+	border-top: 0;
+	margin-top: -10.5px;
+	margin-left: -18px;
+}
+.feedhelper{
+  color: black;
+  font-size: 12px;
+}
+.msgUserHelper a{
+  color: black;
 }

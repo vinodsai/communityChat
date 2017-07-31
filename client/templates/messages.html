@@ -1,8 +1,10 @@
 <template name="messages">
     <div class="messageBox">
       {{#each allMessages}}
-        <h5 class="mainMessage">{{message}}</h5>
-        <h6 class='messageUser'><span class="msgHelper">from </span><strong><a href={{pathFor 'userProfile' username=username _id=user}}>{{username}}</a></strong></h6>
+        <div class="{{msgFromUser}}">
+          <h5 class="mainMessage">{{message}}</h5>
+          <h6 class='messageUser {{msgUserName}}'><span class="msgHelper">from </span><strong><a href={{pathFor 'userProfile' username=username _id=messageOwner}}>{{username}}</a></strong></h6>
+        </div>
         <span class="input-group"></span>
       {{/each}}
     </div>

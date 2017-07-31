@@ -27,3 +27,4 @@ arillo:flow-router-helpers
 accounts-ui
 accounts-google
 session
+momentjs:moment
