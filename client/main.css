@@ -4,6 +4,36 @@
   color: #02B875;
   font-size: 40px;
 }
+.navbar{
+  position: relative;
+}
+.homeJumbotron{
+    /*padding-top: 30px;
+    padding-bottom: 30px;*/
+    margin-bottom: 30px;
+    padding: 55px;
+    color: inherit;
+    background-color: #eee;
+    position: relative;
+    top: -20px;
+    height: 600px;
+}
+.homeContainer{
+  text-align: center;
+  position: absolute;
+  top: 30%;
+}
+.directionIcon{
+  position: absolute;
+  top: 90%;
+  left: 48%;
+  color: grey;
+}
+.directionIcon p{
+  position: absolute;
+  left: -40px;
+  width: 100px
+}
 .navbar-default .navbar-left > li > a {
     color: #02B875;
 }
