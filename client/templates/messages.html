@@ -3,7 +3,7 @@
       {{#each allMessages}}
         <div class="{{msgFromUser}}">
           <h5 class="mainMessage">{{message}}</h5>
-          <h6 class='messageUser {{msgUserName}}'><span class="msgHelper">from </span><strong><a href={{pathFor 'userProfile' username=username _id=messageOwner}}>{{username}}</a></strong></h6>
+          <h6 class='messageUser {{msgUserName}}'><span class="msgHelper">from </span><strong><a href={{pathFor 'userProfile' username=username _id=messageOwner}}>{{username}}</a></strong><span class="timeStamp"> {{msgTimeStamp}}</span></h6>
         </div>
         <span class="input-group"></span>
       {{/each}}

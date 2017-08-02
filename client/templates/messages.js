@@ -23,5 +23,9 @@ Template.messages.helpers({
     else{
       return 'msgUserHelper';
     }
+  },
+  msgTimeStamp: function(){
+    var time = moment(this.createdAt).format('ll')
+    return time;
   }
 });

@@ -8,6 +8,3 @@ Meteor.subscribe('allFeeds');
 Meteor.subscribe('user');
 Meteor.subscribe('allMessages');
 Meteor.subscribe('allNotifications');
-
-var now = moment().format('dddd');
-console.log(now);

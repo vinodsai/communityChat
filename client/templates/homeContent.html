@@ -12,8 +12,10 @@
           <div class="panel panel-default">
               <div class="panel-heading">
                 <h5>{{channel}}</h5>
-                {{#if currentUser}}
-                  <button class='btn btn-sm' id='addFeed'>Add to Feed</button>
+                {{#if channelExists _id}}
+                  <button class='btn btn-sm' id='remFeed'>Remove from feeds</button>
+                {{else}}
+                  <button class="btn btn-sm" id="addFeed">Add to feeds</button>
                 {{/if}}
               </div>
             </div>

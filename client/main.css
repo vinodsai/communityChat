@@ -183,12 +183,12 @@ hr {
 	top: 10px;
 	width: 0;
 	height: 0;
-	border: 21px solid transparent;
+	border: 15px solid transparent;
 	border-right-color: #02B875 ;
 	border-left: 0;
 	border-top: 0;
 	margin-top: -10.5px;
-	margin-left: -18px;
+	margin-left: -10px;
 }
 .feedhelper{
   color: black;
@@ -196,4 +196,7 @@ hr {
 }
 .msgUserHelper a{
   color: black;
+}
+.timeStamp{
+  color: #303030;
 }
