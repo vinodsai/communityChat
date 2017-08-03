@@ -25,12 +25,12 @@
       <h4>Welcome <span class="profileName">{{username}}</span></h4>
       {{#if profileUser}}
         {{#if sentRequest}}
-          <button type="button" class="btn btn-default btn-sm" id='addFriend'>Send Friend Request</button>
-        {{else}}
-          <p>Friend request sent</p>
+          <!-- {{#if areFriends}} -->
+            <button type="button" class="btn btn-default btn-sm {{disabled}}" id='addFriend'>Send Friend Request</button>
+          <!-- {{/if}} -->
+          {{else}}
+          <p>You are friends</p>
         {{/if}}
-      {{else}}
-      <p>Duh</p>
       {{/if}}
     </div>
     <div class="profieBox">

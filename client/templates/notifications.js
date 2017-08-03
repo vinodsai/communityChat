@@ -1,14 +1,15 @@
 Template.notifications.helpers({
   notification: function(){
-    return Notifications.find({friendId: Meteor.userId()}, {sort: { createdAt: -1 }});
+    return Notifications.find({requestTo: Meteor.userId()});
   },
-  wasFriend: function(){
-    var friendNumber = Friends.find({ $and: [ {userId: Meteor.userId()}, {friendId: this.userId}]}).count();
-    if(friendNumber>0)
+  notFriended: function(requestedUserId) {
+    var userFriends = Friends.find({ $and: [ {friendId: requestedUserId}, {userId: Meteor.userId()}]}).count();
+    // console.log(userFriends);
+    // Friends.find({ $and: [ {friendId: requestedUserId}, {userId: Meteor.userId()}]}).count();
+    if(userFriends > 0)
     {
       return false;
-    }
-    else{
+    }else{
       return true;
     }
   },
@@ -16,10 +17,10 @@ Template.notifications.helpers({
     return Meteor.users();
   }
 })
-
+//
 Template.notifications.events({
   'click #acceptRequest':function(){
-    Meteor.call('addFriend', this.userName, this.userId);
+    Meteor.call('addFriend', this.requestFromName, this.requestFrom);
     console.log(Meteor.userId());
   },
   'click #rejectRequest': function(){

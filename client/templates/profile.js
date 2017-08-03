@@ -12,9 +12,6 @@ Template.profile.helpers({
   uniqueId: function(){
     return Meteor.user();
   },
-  userFeed: function(){
-    return  Feeds.find();
-  },
   profileUser: function(){
     var userId  = Meteor.userId();
     var profileId = FlowRouter.getParam('_id');
@@ -23,18 +20,33 @@ Template.profile.helpers({
     }
   },
   sentRequest: function(){
-    var friendId = FlowRouter.getParam('_id');
-    // var friendObject = Notifications.find({friendId: friendId}).count();
-    var friendObject = Notifications.find({ $and: [ {userId: Meteor.userId()}, {friendId: friendId}]}).count();
-    if(friendObject>0){
+    var userId  = Meteor.userId();
+    var profileId = FlowRouter.getParam('_id');
+    var areFriends = Friends.find({ $and: [ {friendId: Meteor.userId()}, {userId: profileId}]}).count();
+    console.log(areFriends);
+    if(areFriends > 0){
       return false;
     }else{
       return true;
     }
   },
+  disabled: function(){
+    var userId  = Meteor.userId();
+    var profileId = FlowRouter.getParam('_id');
+    var inNotifications = Notifications.find({ $and: [ {requestFrom: Meteor.userId()}, {requestTo: profileId}]}).count();
+    console.log(inNotifications);
+    if(inNotifications > 0){
+      return 'disabled';
+    }else{
+      return false;
+    }
+  },
+  // areFriends: function(){
+  //
+  // }
   userFeeds: function(){
     var userId = FlowRouter.getParam('_id');
-    console.log(userId);
+    // console.log(userId);
     return Feeds.find({user: userId})
   }
 });

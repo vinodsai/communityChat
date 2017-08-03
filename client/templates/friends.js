@@ -15,5 +15,7 @@ Template.friends.helpers({
 })
 Template.friends.events({
   'click #removeFriend': function(){
+    Meteor.call('removeFriend', this._id);
+    Meteor.call('removeNotificationFromFriend', this.friendId);
   }
 })

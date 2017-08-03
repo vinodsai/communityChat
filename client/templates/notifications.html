@@ -1,15 +1,15 @@
 <template name="notifications">
+  <br>
   <div class="notificationContainer">
-    <br>
     {{#each notification}}
-    <div class="panel panel-default">
+      <div class="panel panel-default">
         <div class="panel-heading">
-            <h5>You got a friend request from <strong><span class="name">{{userName}}</span></strong></h5>
-          {{#if wasFriend}}
+          <h5>You got a friend request from <strong><span class="name">{{requestFromName}}</span></strong></h5>
+          {{#if notFriended requestFrom}}
             <button class='btn btn-default notificationButton btn-sm' id='acceptRequest'>Accept</button>
             <button class='btn btn-default notificationButton btn-sm' id='rejectRequest'>Decline</button>
-            {{else}}
-            <p style='color:grey'>Friends</p>
+          {{else}}
+            <p style='color:grey'>You are already friends.</p>
           {{/if}}
         </div>
       </div>
